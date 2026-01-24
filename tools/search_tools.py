@@ -220,7 +220,7 @@ async def serp_google_images(
     Returns:
         Formatted image search results.
     """
-    return await serp_google_search(
+    result: str = await serp_google_search(
         query=query,
         search_type="images",
         country=country,
@@ -228,6 +228,7 @@ async def serp_google_images(
         number=number,
         page=page,
     )
+    return result
 
 
 @mcp.tool()
@@ -255,7 +256,7 @@ async def serp_google_news(
     Returns:
         Formatted news search results.
     """
-    return await serp_google_search(
+    result: str = await serp_google_search(
         query=query,
         search_type="news",
         country=country,
@@ -264,6 +265,7 @@ async def serp_google_news(
         number=number,
         page=page,
     )
+    return result
 
 
 @mcp.tool()
@@ -288,7 +290,7 @@ async def serp_google_videos(
     Returns:
         Formatted video search results.
     """
-    return await serp_google_search(
+    result: str = await serp_google_search(
         query=query,
         search_type="videos",
         country=country,
@@ -296,6 +298,7 @@ async def serp_google_videos(
         number=number,
         page=page,
     )
+    return result
 
 
 @mcp.tool()
@@ -320,7 +323,7 @@ async def serp_google_places(
     Returns:
         Formatted place search results.
     """
-    return await serp_google_search(
+    result: str = await serp_google_search(
         query=query,
         search_type="places",
         country=country,
@@ -328,6 +331,7 @@ async def serp_google_places(
         number=number,
         page=page,
     )
+    return result
 
 
 @mcp.tool()
@@ -352,7 +356,7 @@ async def serp_google_maps(
     Returns:
         Formatted map search results.
     """
-    return await serp_google_search(
+    result: str = await serp_google_search(
         query=query,
         search_type="maps",
         country=country,
@@ -360,3 +364,4 @@ async def serp_google_maps(
         number=number,
         page=page,
     )
+    return result
