@@ -180,7 +180,9 @@ async def serp_google_search(
         # Related Searches
         if "related_searches" in result and result["related_searches"]:
             output_parts.append("\n## Related Searches")
-            queries = [item.get("query", "") for item in result["related_searches"] if item.get("query")]
+            queries = [
+                item.get("query", "") for item in result["related_searches"] if item.get("query")
+            ]
             output_parts.append(", ".join(queries))
 
         if not output_parts:

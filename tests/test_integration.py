@@ -54,9 +54,7 @@ class TestSerpIntegration:
     async def test_localized_search(self, api_token):
         """Test localized search with country and language."""
         client = SerpClient(api_token=api_token)
-        result = await client.search(
-            query="weather", type="search", country="uk", language="en"
-        )
+        result = await client.search(query="weather", type="search", country="uk", language="en")
 
         assert "organic" in result
 
@@ -64,8 +62,6 @@ class TestSerpIntegration:
     async def test_time_filtered_search(self, api_token):
         """Test search with time filter."""
         client = SerpClient(api_token=api_token)
-        result = await client.search(
-            query="AI news", type="news", range="qdr:d"
-        )
+        result = await client.search(query="AI news", type="news", range="qdr:d")
 
         assert "news" in result or "organic" in result
