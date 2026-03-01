@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
         - name: mcp-serp
-          image: ghcr.io/acedatacloud/mcp-serp:latest
+          image: ghcr.io/acedatacloud/mcp-serp:${TAG}
           ports:
             - containerPort: 8000
               protocol: TCP
